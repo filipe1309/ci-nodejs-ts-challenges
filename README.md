@@ -32,20 +32,31 @@ cd ci-nodejs-ts-challenges
 
 ## :runner: Running
 
+### Development
 ```sh
-npm run dev
+npm run start:dev
+```
+
+### Build
+```sh
+npm run build
+```
+
+### Production
+```sh
+npm run start
+node dist/server.js  # or
 ```
 
 > Access http://localhost:3000
 
-<!-- ## :white_check_mark: Tests
-
-After up the container:
+## :white_check_mark: Tests
 
 ```sh
-docker-compose exec -t {{ CONTAINER_SERVICE_NAME }} ./vendor/bin/phpunit
+npm run test
 ```
 
+<!-- 
 ## Contributing
 
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
