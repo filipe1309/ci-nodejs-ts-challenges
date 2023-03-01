@@ -1,6 +1,6 @@
 import {containsDuplicateTests, containsDuplicate }  from "./arrays_hashing/easy/contains_duplicate";
 
-console.log("Contains Duplicate");
+executeTests(validAnagramTests, isAnagram);
 
 containsDuplicateTests.forEach(([input, expected]) => {
     const result = containsDuplicate(input as number[]);
