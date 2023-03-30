@@ -79,6 +79,28 @@ function isAnagramV4(input: string[]): boolean {
     return s.split("").sort().join("") === t.split("").sort().join("");
 };
 
+// Neetcode solution
+function isAnagramV5(s: string, t: string) {
+    if (s.length !== t.length) return false;
+
+    let first: Array<string | null> = s.split('');
+    const second = t.split('');
+
+    for (let i = 0; i < second.length; i++) {
+        const element = second[i];
+
+        let found = first.indexOf(element);
+
+        if (found !== -1) {
+            first[found] = null;
+        } else {
+            return false;
+        }
+    }
+
+    return true;
+}
+
 // Runtime 90 ms
 // Memory 44.7 MB
 function isAnagram(input: string[]): boolean {

@@ -1,5 +1,5 @@
-import {containsDuplicateTests, containsDuplicate }  from "./arrays_hashing/easy/contains_duplicate";
-import {validAnagramTests, isAnagram }  from "./arrays_hashing/easy/valid_anagram";
+import {containsDuplicateTests, containsDuplicate }  from "./1_arrays_hashing/easy/contains_duplicate";
+import {validAnagramTests, isAnagram }  from "./1_arrays_hashing/easy/valid_anagram";
 let startTime, endTime;
 
 //executeTests(containsDuplicateTests, containsDuplicate);

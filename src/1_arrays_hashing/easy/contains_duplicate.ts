@@ -29,19 +29,29 @@ const containsDuplicateTests = [
     [[1,1,1,3,3,4,3,2,4,2], true],
 ];
 
-// Solution 1
-// function containsDuplicate(nums: number[]): boolean {
-//     if (nums.length < 1 || nums.length > 10**5) {
-//         return false;
-//     }
-//     nums.sort()
-//     return nums.some(
-//         (el, i, arr) => (arr[i+1] !== undefined) ? el == arr[i+1] : false
-//     )
-// };
+function containsDuplicateV1(nums: number[]): boolean {
+    if (nums.length < 1 || nums.length > 10**5) {
+        return false;
+    }
+    nums.sort()
+    return nums.some(
+        (el, i, arr) => (arr[i+1] !== undefined) ? el == arr[i+1] : false
+    )
+};
+
+// Neetcode solution
+function containsDuplicateV2(nums: number[]): boolean {
+    const set = new Set();
+
+    for (let i = 0; i < nums.length; i++) {
+        if (set.has(nums[i])) return true;
+        else set.add(nums[i]);
+    }
+
+    return false;
+}
 
 
-// Solution 2
 // Time complexity: O(n)
 // Space complexity: O(n)
 var containsDuplicate = function(nums: number[]): boolean {

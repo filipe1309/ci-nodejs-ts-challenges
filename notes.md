@@ -6,7 +6,7 @@ Setup: https://www.youtube.com/watch?v=mxiRCcnsKDw
 
 ```bash
 npm init -y
-npm install typescript -D
+npm install typescript @types/node -D
 npx tsc --init
 npm i tsx -D # tsx is a TypeScript compiler for Node.js
 npm i tsup -D # tsup is a zero-config TypeScript compiler
